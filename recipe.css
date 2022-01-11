@@ -3,7 +3,8 @@ h1, h2 {
     font-family: "Lucida Sans Unicode", Helvetica, Arial,serif;
     font-size: 18pt;
     text-decoration: underline;
-    letter-spacing: 0.25em;
+    letter-spacing: 0.20em;
+    font-weight: 380;
 }
 span {
     background-color: #f0F0F0;
