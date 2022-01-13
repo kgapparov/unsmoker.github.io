@@ -1,0 +1,49 @@
+
+body {
+    background: url(https://images.unsplash.com/photo-1544306094-e2dcf9479da3) no-repeat;
+    background-size: cover;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  h1 {
+      opacity: 50%;
+  }
+  
+div.form-content {
+  width: 30rem;
+  height: 20rem;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, .15);
+  position: relative;
+  backdrop-filter: blur(5px);
+}
+div.info {
+    text-align: right;
+}
+
+div.info label{
+    position: relative;
+    right: 150px;
+}
+
+.block {
+    display: block;
+}
+h1 {
+    text-align: center;
+}
+fieldset {
+    text-align: center;
+}
+#agreement {
+    text-align: left;
+    margin-top: 15px;
+}
+.buttons {
+    text-align: center;
+    margin-top: 10px;
+}
