@@ -1,0 +1,138 @@
+body {
+  
+    font-family: Verdana, Tahoma, serif;
+    font-size: 8pt;
+    margin: 0px;
+    padding: 0px;
+}
+#imageBanner {
+    background-image: url(./images/bannerbg.png);
+}
+.main-page {
+    background-image: url("./images/background.png");
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    text-align: right;
+    height: 1198px;
+    position: relative;
+}
+.header {
+    text-align: center;
+    font-family: Tahoma, Verdana, serif;
+    font-size: 24pt;
+    text-shadow: 3px 3px #999999;
+    
+}
+
+.general-overview {
+    background-color: #A2B964;
+    width: 242px;
+    float: right;
+    overflow: hidden;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    font-family: Arial, seif;
+    font-size: 8pt;
+    text-align: left;
+}
+
+.main-content {
+    width: 800px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border: 4px solid gray;
+    border-radius: 20px;
+    background-color: #A2B964;
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    text-align: left;
+}
+.main-content::after{
+    clear: both;
+    content:".";
+    display:block;
+    height:0;
+    visibility:hidden;
+}
+
+.overall-review {
+    width: 550px;
+    height: 945px;
+    float: left;
+    margin: 0px;
+    overflow: hidden;
+    border-top-left-radius: 15px;
+    background-image: url("./images/background.png");
+}
+
+.rate {
+    background-image: url("./images/rbg.png");
+    font-size: 48pt;
+    color: red;
+}
+.column {
+    float:left;
+    width: 47%;
+    margin-left: 2%;
+}
+
+.div-review {
+    margin-bottom: 20px;
+}
+
+/* found this solution in stackoverflow to solve border collision problem */
+.div-review::after{
+        clear:both;
+        content:".";
+        display:block;
+        height:0;
+        visibility:hidden;
+}
+.review{
+    font-size: 8pt;
+    background-color: #e8dc9b;
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 5px;
+}
+/* found this solution in stackoverflow to solve border collision problem */
+.review::after{
+    clear:both;
+    content:".";
+    display:block;
+    height:0;
+    visibility:hidden;
+}
+p img { 
+    float: left;
+    padding-right: 5px;
+}
+.italic {
+    font-style: italic;
+}
+dt {
+    padding: 10px 10px 0 10px;
+    font-weight: 600;
+}
+dd ul li a {
+    text-decoration: none;
+}
+dd ul li {
+    list-style: none;
+    position: relative;
+    right: 35px;
+}
+.bar {
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+}
+.verify {
+    position:absolute;
+    right: 0px;
+    bottom: 0px;
+    opacity: 50%;
+}
