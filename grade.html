@@ -7,35 +7,37 @@
 <body>
 
 
-    <div class="form-content">
-        <h1>Retrieve your grade</h1>
-        <form action="http://mumstudents.org/params.php" method="get">
-            <div class="info">
-                <label class = "block" for="name">Name: <input type="text" name="name" pattern="[A-Za-z]*" placeholder="Enter your Name"></label>
-                <label  class = "block" for="sudentId">Student ID: <input type="text" name="studentId" pattern="[0-9]*" placeholder="Enter your student ID"></label>
-                <label class = "block" for="password">Password: <input type="password" name="password"  placeholder="Enter your password"></label>
-            </div>
-            <fieldset>
-                <legend>Choose your Entry</legend>
-                <input type="radio" name="entry" value="November 2021">
-                <label for="entry">November 2021</label>
-                <input type="radio" name="entry" value="May 20201">
-                <label for="entry">May 20201</label>
-                <input type="radio" name="entry" value="August 20201">
-                <label for="entry">August 20201</label>
-            </fieldset>
-            <fieldset id="agreement">
-                <legend>Personal Responsibility</legend>
-                <input type="checkbox" name="agree" id="isNotLying" value = "true"> 
-                <label for="agree">I agree that my datas are correct</label> <br>
-                <input type="checkbox" name="agree" id="ownCourse" value = "true">          
-                <label for="agree">I agree that I am looking only my results</label>
-            </fieldset>
-            <div class="buttons">
-                <input type="reset" value="Reset">
-                <input type="submit" value="Submit">
-            </div>
-        </form>
+    <div class="main-page">
+        <div class="form-content">
+            <h1>Retrieve your grade</h1>
+            <form action="http://mumstudents.org/params.php" method="get">
+                <div class="info">
+                    <label class = "block" for="name">Name: <input type="text" name="name" pattern="[A-Za-z]*" placeholder="Enter your Name"></label>
+                    <label  class = "block" for="sudentId">Student ID: <input type="text" name="studentId" pattern="[0-9]*" placeholder="Enter your student ID"></label>
+                    <label class = "block" for="password">Password: <input type="password" name="password"  placeholder="Enter your password"></label>
+                </div>
+                <fieldset>
+                    <legend>Choose your Entry</legend>
+                    <input type="radio" name="entry" value="November 2021">
+                    <label for="entry">November 2021</label>
+                    <input type="radio" name="entry" value="May 20201">
+                    <label for="entry">May 20201</label>
+                    <input type="radio" name="entry" value="August 20201">
+                    <label for="entry">August 20201</label>
+                </fieldset>
+                <fieldset id="agreement">
+                    <legend>Personal Responsibility</legend>
+                    <input type="checkbox" name="agree" id="isNotLying" value = "true">
+                    <label for="agree">I agree that my datas are correct</label> <br>
+                    <input type="checkbox" name="agree" id="ownCourse" value = "true">
+                    <label for="agree">I agree that I am looking only my results</label>
+                </fieldset>
+                <div class="buttons">
+                    <input type="reset" value="Reset">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
     </div>
 </body>
 </html>
