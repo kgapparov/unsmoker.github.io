@@ -24,29 +24,29 @@
                 </div>
                 <div class="item">
                     <label for="sex">Gender</label>
-                    <input type="radio" name="sex" id="male" value="Male" checked> <span class="male">Male</span>
+                    <input type="radio" name="sex" id="male" value="Male" > <span class="male">Male</span>
                     <input type="radio" name="sex" id="famale" value="Female" checked> <span class = "female">Female</span>
                 </div>
                 <div class="item">
-                    <label for="age">Age</label>
-                    <input type="text" name="age">
+                    <label for="age" >Age</label>
+                    <input type="text" maxlength="2" name="age">
                 </div>
                 <div class="item">
                     <label for="personality">Personality type:</label>
-                    <input type="text" name="personType">
+                    <input type="text" name="personType" maxlength="4">
                 <a href="http://humanmetrics.com/cgi-win/JTypes2.asp">(Don't know your type?)</a>
                 </div>
                 <div class="item">
                     <label for="os">Favorite OS: </label>
                     <select name="os" id="os">
-                        <option value="Windows">Windows</option>
+                        <option value="Windows" selected>Windows</option>
                         <option value="Linux">Linux</option>
                         <option value="MacOS">MacOS</option>
                     </select>
                     <br><br>
                     <label for="ageStart">Seeking age:</label>
-                    <input type="text" id="start" min="2" max="2" pattern="[0-9]*" placeholder="min"> <span id="to">to</span>
-                    <input type="text" id="end" min="2" max="2" pattern="[0-9]*" placeholder="max">
+                    <input type="text" id="start" maxlength="2" pattern="[0-9]*" placeholder="min"> <span id="to">to</span>
+                    <input type="text" id="end" maxlength="2" pattern="[0-9]*" placeholder="max">
                 </div>
                 <input type="submit" value="Sign Up">
             </fieldset>

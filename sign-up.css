@@ -35,6 +35,9 @@ fieldset {
     position: absolute;
     left: 100px;
 }
+input[name="age"], input[name="personType"] {
+    width: 50px;
+}
 #male {
     left: 170px;
 }
@@ -48,7 +51,7 @@ fieldset {
 }
 fieldset a {
     position: relative;
-    left: 160px;
+    left: 80px;
 }
 #start, #end {
     width: 50px;
