@@ -1,0 +1,74 @@
+body {
+    width: 450px;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.logo-1 {
+    color: gray;
+    font-weight: 800;
+}
+.logo-2 {
+    color: blue;
+    font-weight: 400;
+}
+div.header p {
+    position: relative;
+    top: -25px;
+    font-size: 12pt;
+}
+fieldset legend {
+    border: 1px solid gray;
+    padding: 4px;
+    box-shadow: 2px 2px gray;
+    background-color: #fff;
+}
+fieldset {
+    border-radius: 15px;
+    background-color: #E0E1FF;
+    font-size: 10pt;
+}
+.item {
+    margin: 10px;
+    position: relative;
+}
+.item input, select {
+    position: absolute;
+    left: 100px;
+}
+#male {
+    left: 170px;
+}
+.male {
+    position: relative;
+    left: 70px;
+}
+.female {
+    position: relative;
+    left: 110px;
+}
+fieldset a {
+    position: relative;
+    left: 160px;
+}
+#start, #end {
+    width: 50px;
+}
+#start {
+    left: 100px;
+}
+#end {
+    left: 200px;
+}
+#to {
+    position: relative;
+    left: 90px;
+}
+a {
+    text-decoration: none;
+    color: red;
+}
+input[type="submit"] {
+    background-color: #EFA9A6;
+    font-weight: 800;
+    font-size: 12pt;
+}
