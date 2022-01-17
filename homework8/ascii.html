@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./ascii.css">
+    <script src="./ascii.js"></script>
+    <script src="./animation.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <h1><sup>&hearts;</sup> CS472: ASCII Animation Viewer</h1>
+        <textarea name="textField" id="textField" cols="80" rows="20"></textarea>
+        <fieldset>
+            <legend>Play Controls</legend>
+            <button id="play">Play</button><button>Stop</button>
+        </fieldset>
+        <fieldset>
+            <legend>Animation</legend>
+            <select name="animation" id="animation">
+                <option value="blanc">BLANC</option>
+                <option value="custom">CUSTOM</option>
+                <option value="exercise">EXERCISE</option>
+                <option value="juggler">JUGGLER</option>
+                <OPTION value="bike">BIKE</OPTION>
+                <option value="dive">DIVE</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Size</legend>
+            <select name="size" id="size">
+                <option value="medium">MEDIUM</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Speed</legend>
+            <input type="checkbox" name="speed" id="speed"> Turbo
+        </fieldset>
+    </div>
+
+   
+</body>
+</html>
