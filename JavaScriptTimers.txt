@@ -1,0 +1,69 @@
+1. What is the difference between the following 2 statements?
+
+1. SetTimeout(booyah, 2000);
+
+2. SetTimeout(booyah(), 2000);
+
+Answer:
+
+At first line the function booyah will be called after 2 seconds.
+
+Second line the function executes instantly, after 2 second no function will be executed.
+
+2. 2. What do the following 2 alerts display (answer without running the code)?
+
+var myfunc = function(a, x)
+
+{ return a * x; };
+
+var x = myfunc(2, 3);
+
+var y = myfunc;
+
+alert(x);
+
+alert(y(2,3));
+
+X -> myfunc(2,3) #return 6, x is the result of the function,
+
+Y = myFunc # means that y is reference of the function myFunc. Not digit.
+
+Alert(x) - alerts digit 6
+
+alert(y(2,3)) alerts also digit 6 , result of function y.
+
+3. Write functions booyah1 and booyah2 so that in both cases below, an alert box comes up after 2 seconds that says “BOOYAH”;
+
+function booyah1 () {
+
+alert(“BOOYAH”);
+
+}
+
+function booyah2(){
+
+return booyah1;
+
+}
+
+4. What is "Unobtrusive Javascript"? What is the practical application of Unobtrusive Javascript (and the reasons for using it)?
+
+Answer:
+
+Unobtrusive JavaScript means the way of writing JavaScript language in which we properly separate Document Content and Script Content thus allowing us to make a clear distinction between them.
+
+Example:
+
+1. Bad way:
+
+1. <input type = “button” id = “btn” onclick=“alert(‘Test’)” />
+
+Correct what, Unobtrusive
+
+Html file :
+
+<input type = “button” id=“btn” />
+
+JavaScript file
+
+var el = document.getElementById(‘btn’);
