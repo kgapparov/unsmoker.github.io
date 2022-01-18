@@ -13,8 +13,8 @@ $(document).ready(function () {
             animateSlow(250);
         }
     });
-    $("#size").click(function (e) { 
-        e.preventDefault();
+    $("#size").change(function (e) { 
+        //e.preventDefault();
         setSize();
     });
     $("#stop").click(function (e) { 
@@ -50,8 +50,8 @@ function animateSlow(x = 250){
     }, x);    
 }
 function setSize(){
-    let textArea = document.getElementById("textField");
-    textArea.style.fontSize = document.querySelector('#size').value;    
+    let fontSize = $("#size option:selected").val();
+    $("#textField").css("fontSize", fontSize);
 }
 function setAnimationType () {
     let textArea = $("#textField");
