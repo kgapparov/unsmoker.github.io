@@ -646,26 +646,3 @@ ANIMATIONS["Exercise"] = ANIMATIONS["exercise"] = ANIMATIONS["EXERCISE"] = EXERC
 ANIMATIONS["Juggler"] = ANIMATIONS["juggler"] = ANIMATIONS["JUGGLER"] = JUGGLER;
 ANIMATIONS["Bike"] = ANIMATIONS["bike"] = ANIMATIONS["BIKE"] = BIKE;
 ANIMATIONS["Dive"] = ANIMATIONS["dive"] = ANIMATIONS["DIVE"] = DIVE;
-
-window.onload = function () {
-    let animation = document.getElementById("animation");
-    let play = document.getElementById("play");
-    play.onclick = playAnimation;
-    animation.onchange = setAnimationType;
-}
-function playAnimation(){
-    let textArea = document.getElementById("textField");
-    let frames = textArea.innerHTML.split("=====\n");
-    let setText = (text) => {
-        textArea.innerHTML = text;
-    }
-    frames.forEach((el) => {
-        setInterval(setText, 250, el);
-    });
-}
-
-function setAnimationType () {
-    let textArea = document.getElementById("textField");
-    let animationType = document.getElementById("animation").value;
-    textArea.innerHTML = ANIMATIONS[animationType];
-}
