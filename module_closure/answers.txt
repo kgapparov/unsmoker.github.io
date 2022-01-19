@@ -1,0 +1,60 @@
+1. Determine what this Javascript code will print out (without running it):
+A : 10 8 8 9 10 1
+
+ What is the difference between a method and function?
+A: function is set of line commands grouped by reference name, can apply parameters. Method is behavior of object, statement. Function can reference to the method as value. In practice it implements by using closure approach. 
+
+ What does 'this' refer to when used in a Java method? 
+A: in Java method this is references to instance of class - to Object.
+
+ What does 'this' refer to when used in a JavaScript method? 
+A: it depends where it called. 
+Alone, this refers to the global object
+In a function, this refers to the global object
+In function, in strict mode, this is underlined. 
+In an event, this refers to the element that received the event
+In methods like call(), apply() can refer this to any object. 
+ What does 'this' refer to when used in a JavaScript constructor function? 
+A: refers to created object;
+
+Assume object x is the prototype for object y in Javascript. Object x has a method f( ) containing keyword 'this'. When f is called by x.f( ), what does 'this' refer to?
+It refers to its owner, this case refers to x; 
+ What is a free variable in JavaScript?
+Variables not inner block of function and not in parameters, it is from wrapper function  or environment variables. 
+ Create an object that has properties with name = "fred" and major="music" and a property that is a function that takes 2 numbers and returns the smallest of the two, or the square of the two if they are equal.
+A: 
+	var myObje = {
+		name: “fred”;
+		major: “music”;
+		getSmallestOrSquare: function(x, y) {
+			if (x < y) { return x; }
+			if (x > y) {return x;}
+  			return x*x;
+		}
+	}
+9. 	Write Javascript code for creating three Employee objects using the "new" keyword and a constructor function. Employee objects have the following fields: name, salary, position.
+var function Employee(name, salary, position) {
+this.name =name;
+this.salary = salary;
+this.position = position;
+}
+let emp1 = new Employee(“Alan”, 5000, “manager”);
+
+10. Write a Javascript function that takes any number of input arguments and returns the product of the arguments.
+
+function myFunc(){
+	let product = 1;
+	for (let I = 0; I < argument.length; I++){
+		product *= argument[I];
+	}
+	return product;
+}
+
+11. Write an arrow function that returns the maximum of its three input arguments.
+Let getMax = (x, y, z) => {
+	let max = -Infinity;
+	max = Math.max(x, max);
+	max = Math.max(y, max);
+	max = Math.max(z, max);
+	return max;
+}
