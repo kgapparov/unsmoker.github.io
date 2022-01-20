@@ -30,5 +30,5 @@ var createAccount = function(dname, ddeposit) {
     }, getDeposit: function(){
         return deposit;
      }
-    }
+    };
 }
