@@ -22,7 +22,7 @@ c(8,9,10);
 document.write(b);
 document.write(x);
 }
-Answer : 1 8 8 9; 
+Answer : 1 8 8 9 10 1; 
 
 2. Define Global Scope and Local Scope in Javascript.
 Global scope is window scope varibales, env variables and counters or function common variables uses this type
