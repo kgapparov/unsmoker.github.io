@@ -40,14 +40,18 @@ $(document).ready(function () {
             gameStarted = false;
         } else {
             gameStarted = true;
+            $("h2").text("The game is Started");
+            $(".boundary").removeClass("youlose");
+            colored = false;
+            result = true;
         }
    }
    function getResult() {
         if (gameStarted && result) {
-            alert("You win! :] ");
+            $("h2").text("You win! :]");
             gameStarted = false;
         } else if (gameStarted && !result) {
-            alert ("You lost!");
+            $("h2").text("You lost! :( ");
             gameStarted = false;
         }
    }
