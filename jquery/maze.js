@@ -22,6 +22,15 @@ $(document).ready(function () {
         }
    });
 
+   $("#maze").hover(function () {
+           // over
+           
+       }, function () {
+            if (gameStarted) {
+                setColor();
+            }
+       }
+   );
    $("#start").click(function (e) { 
        e.preventDefault();
        e.stopImmediatePropagation();
