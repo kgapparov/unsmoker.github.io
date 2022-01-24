@@ -22,6 +22,11 @@ $(document).ready(function () {
         }
    });
 
+   $("#start").click(function (e) { 
+       e.preventDefault();
+       e.stopImmediatePropagation();
+        startEndGame();
+   });
    function setColor(){
         if (gameStarted && !colored) {
             $(".boundary").addClass("youlose");
