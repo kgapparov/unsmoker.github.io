@@ -1,0 +1,11 @@
+body {
+    background-color: lightblue;
+}
+
+form {
+    border: 1px solid black;
+    width: 20%;
+    margin : 0 auto;
+    margin-top: 200px;
+    text-align: center;
+}
