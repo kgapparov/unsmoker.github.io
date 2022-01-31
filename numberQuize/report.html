@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numbers QUIZE by Khassangali Gapparov</title>
+</head>
+<body>
+    <h1>Source Code </h1>
+    <pre>
+        <code>
+            <xmp>
+                var express = require('express');
+                var app = express();
+                var users = new Map();
+                app.set("view engine", "pug")
+                
+                var userModule = (function () {
+                    var questions = [
+                        "5, 6, 7, 8 ",
+                        "1, 1, 2, 3, 5", 
+                        "1, 4, 9, 16, 25",
+                        "2, 3, 5, 7, 11" , 
+                        "1, 2, 4, 8, 16"
+                    ]; 
+                    var answers = ["9", "8", "36", "13", "32"];
+                
+                    let userDB = new Map();
+                    let  createUser1 = function (){
+                        let id = Math.floor(Math.random()*100);
+                        let user = {
+                            "id" : id, 
+                            "score": 0
+                        }
+                        userDB.set(String(user.id), user.score);
+                        return user;
+                    };
+                    var updateUser = function (id, questionID, answer, score) {
+                        let sc = parseInt(score);
+                        if (answers[parseInt(questionID)] == answer) {
+                            sc = sc+1; 
+                            users.set(id, String(sc));
+                        } 
+                        return {
+                            "id" : id,
+                            "score": sc
+                        }
+                    }
+                    return {
+                        createUser : function () {
+                            let user = createUser1();
+                            return user;
+                        },
+                        updateUser : function (id, qid, ans, score) {
+                            return updateUser(id, qid, ans, score);
+                        },
+                        userDB : userDB,
+                        questions : questions,
+                        answers : answers
+                    }
+                })();
+                
+                app.get("/", function(req, res){
+                    res.render('quize', {
+                        user: userModule.createUser(), 
+                        question : userModule.questions[0], 
+                        questionID : 0
+                    });
+                    res.end();
+                });
+                
+                app.get("/quize", express.urlencoded({extended: false}), function(req, res){
+                    let params = req.query;
+                    req.body = req.query.score;
+                    //is it last page? 
+                    if (params.questionID == 4) {
+                        res.render('result', {
+                            score: params.score
+                        });
+                        res.end();
+                    } else {
+                        res.render('quize', {
+                            user: userModule.updateUser(params.id, params.questionID, params.answer, params.score), 
+                            question : userModule.questions[parseInt(params.questionID)+1], 
+                            questionID : parseInt(params.questionID)+1
+                        });
+                        res.end();
+                    }
+                    
+                });
+                
+                var server = app.listen(8080, function(){
+                    console.log("Node server is started")
+                })                
+            </xmp>
+        </code>
+    </pre>
+    <h1>PUG Files quize.pug</h1>
+    <xmp>
+    form(action="http://localhost:8080/quize" method="get" style="border: 1px solid blue; width: 500px; margin:0 auto; padding: 20px")
+        h1 The Number Quize
+        p  Your current score is #{ user.score } out of 5.
+        p  #{ question }
+        label Your answer: 
+        input(type="hidden", name="id" value= user.id )
+        input(type="hidden", name="questionID" value= questionID )
+        input(type="hidden", name="score" value= user.score )    
+        input(type="text", name="answer")
+        input(type="submit", value="Submit")
+    </xmp>
+    <h1>result.pug</h1>
+    <xmp>
+    div(style="border: 1px solid blue; width: 500px; margin:0 auto; padding: 20px")
+        h1 The Number Quize
+        p  Your current score is #{ score }.
+        p  You have completed the Number Quiz, whit a score of #{ score } out of 5. 
+        a(href="http://localhost:8080/") Repeat Again
+
+    </xmp>
+    <img src="1.png" style = " width : 50%;"alt="">
+    <img src="2.png" style = " width : 50%;"alt="">
+    <img src="3.png" style = " width : 50%;"alt="">
+    <img src="4.png" style = " width : 50%;"alt="">
+    <img src="5.png" style = " width : 50%;"alt="">
+    <img src="6.png" style = " width : 50%;"alt="">
+    <img src="7.png" style = " width : 50%;"alt="">
+
+</body>
+</html>

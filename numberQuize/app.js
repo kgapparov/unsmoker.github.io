@@ -57,15 +57,6 @@ app.get("/", function(req, res){
     res.end();
 });
 
-// app.get("/result", function(req, res){
-//     let params = req.query;
-//     res.render('quize', {
-//         score: params.score
-//     });
-//     res.end();
-// });
-
-
 app.get("/quize", express.urlencoded({extended: false}), function(req, res){
     let params = req.query;
     req.body = req.query.score;
